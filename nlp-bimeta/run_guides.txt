@@ -1,0 +1,19 @@
+# 1. Run bimeta
+	python ldabimeta.py --data_dir [path-to-fasta-dir] --bimetaout_dir [path-to-bimetaout-dir] --dataset_name [dataset_name] --result_dir [path-to-bimetaout-dir]
+
+# 2. Run lda-bimeta (should try on small dataset first)
+	python ldabimeta.py --data_dir [path-to-fasta-dir] --bimetaout_dir [path-to-bimetaout-dir] --dataset_name [dataset_name] --result_dir [path-to-ldabimetaout-dir]
+	
+	[dataset_name]: 
+		all - run all dataset
+		S1 - run S1 dataset
+
+
+# 3. Run doc2vec-bimeta
+	Refer to file doc2vec_bimeta.ipynb
+
+
+# 4. Run bert-bimeta
+	Refer to file bertbimeta.ipynb
+
+

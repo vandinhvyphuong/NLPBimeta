@@ -158,6 +158,18 @@ def getDocTopicDist(model, corpus):
     return pd.DataFrame(topics).fillna(0)
     """
 
+def getLdaDocTopics(lda_topics_file, numtopics):
+    """
+    This function load lda_topics_file (datasetname.lda.doctopics.txt) 
+    This temporary file was created by LdaMallet while training LDA model.
+    """
+
+    df = pd.read_csv(lda_topics_file, 
+                    header=None, 
+                    sep = '\t', 
+                    usecols=range(2, numtopics + 2))
+    
+    return df
 
 def getCoherenceScore(model, corpus, coherence='u_mass'):
     cm = CoherenceModel(model=model, corpus=corpus, coherence='u_mass')
